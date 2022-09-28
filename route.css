@@ -1,0 +1,104 @@
+html{
+background-color: black;    
+}
+
+
+body{
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    max-width: 900px;
+    min-height: 100px;
+    max-height: 900px;
+    background-color: #3B444B;
+}
+
+img {
+    width: 95%;
+    height: 50%;
+}
+
+h1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 60px;
+    color: #6D7B8D;
+}
+
+h2{
+    font-family: 'Bungee', cursive;
+    font-size: 30px;
+    color: #6D7B8D;
+}
+
+p{
+    font-family: 'Quantico', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #6D7B8D;
+}
+
+.barre{
+width: 100%;
+color: #6D7B8D;
+font-size: 25px;
+display: flex;
+justify-content: space-around; 
+}
+
+
+.no1{
+width: 200px;
+height: 35px;
+display: flex;
+flex-direction: row;  
+border-radius: 5px;
+background-color: #343434;
+margin-top: 10px;
+justify-content: center;
+align-items: center;
+}
+
+.no1:hover{
+    color: crimson;
+}
+
+.no2{
+width: 200px;
+display: flex;
+flex-direction: row;      
+border-radius: 5px;  
+background-color: #343434;
+margin-top: 10px;
+justify-content: center;
+align-items: center;
+}
+
+.no2:hover{
+    color: crimson;
+}
+
+.no3{
+width: 200px;
+display: flex;
+flex-direction: row;    
+border-radius: 5px;  
+background-color: #343434;
+margin-top: 10px;
+justify-content: center;
+align-items: center;
+}
+
+.no3:hover{
+    color: crimson;
+}
