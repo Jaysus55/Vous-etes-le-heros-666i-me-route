@@ -5,4 +5,4 @@ h1 Vous-etes-le-heros-666ime-route
 - Palette de couleurs: https://coolors.co/3b444b-6d7b8d-343434-000000-dc143c
 
 h2 Diagramme
-![diagramme](diagramme.png)
+![diagramme](assets/diagramme.png)
