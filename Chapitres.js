@@ -212,7 +212,8 @@ document.querySelector(".images").innerHTML=`<img src="${chapterObj[chapterName]
 document.querySelector(".option1").innerHTML=chapterObj[chapterName]["options"][0]["text"];  
 document.querySelector(".option2").innerHTML=chapterObj[chapterName]["options"][1]["text"];  
 document.querySelector(".option3").innerHTML=chapterObj[chapterName]["options"][2]["text"]; 
-for(i = 1; chapterObj < [chapterName].options.length, i++;) {<button class="option1" onclick="$[chapterObj[chapterName].options[i].action]">$[chapterObj[chapterName].options[i].option1]</button>};
-console.log(chapterObj[chapterName]["subtitle"]);
+
 };
+
+
 
