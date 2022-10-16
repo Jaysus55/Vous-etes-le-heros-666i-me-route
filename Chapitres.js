@@ -83,117 +83,117 @@ options:[{text: "Entrer code secret",action:"goToChapter(`secret`)"},
 secret:{
 subtitle:"Entrer le code secret",
 text:"mystere",
-options : {option1: {optiontext:"Retourner au début", action: "goToChapter(`Reveil`)"},},},
+options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
+
 
 codeNon:{
 subtitle:"Vous n'avez pas le code",
 text:"Vous n'avez pas le code pour ouvrir la porte.",
 img:"../assets/porte.jpg", 
-options : {option1: {optiontext:"Retourner sur vos pas", action: "goToChapter(`Creature`)"},},   
-},
+options:[{text: "Retourner sur vos pas",action:"goToChapter(`Creature`)"},]},
+
 
 codeOui:{
 subtitle:"Vous dévérouiller la porte",
 text:"Vous Entrer le code et la porte s'ouvre vous menant vers une salle étrange.",
 img:"../assets/deverouiller.jpg",  
-options : {option1: {optiontext:"Vous dirigez vers l'homme mystérieux", action: "goToChapter(`Homme`)"},},},
+options:[{text: "Vous dirigez vers l'homme mystérieux",action:"goToChapter(`Homme`)"},]},
 
 
 Homme:{
 subtitle:"?/%?$*",
 text:"Vous vous retrouver devant un homme qui semble fondre. L'homme mystérieux ne bouge pas et vous fixe. Que voulez-vous faire?",
 img:"../assets/figure.jpg",    
-options : {option1: {optiontext:"Attaquer l'homme", action: "goToChapter(`mort3`)"},
-           option2: {optiontext:"Tenter de communiquer avec l'homme", action: "goToChapter(`Parler`)"},},},
+options:[{text: "Attaquer l'homme",action:"goToChapter(`mort3`)"},
+         {text: "Tenter de communiquer avec l'homme",action:"goToChapter(`Parler`)"},]},
 
           
 Parler:{
 subtitle:"Le continum espace temps",
 text:"L'homme mystérieux vous montre qu'est-ce qui à causer les changements dans le continum espace temps.",
 img:"../assets/virus.jpg",
-options : {option1: {optiontext:"réinitialiser votre sauvegarde", action: "goToChapter(`fin1`)"},},},
+options:[{text: "réinitialiser votre sauvegarde",action:"goToChapter(`fin1`)"},]},
 
 
 fin1:{
 subtitle:"Vous sauver le monde",
 text:"Vous trouver un remède à la maladie qui s'attaquait au monstre et sauver le monde des montres. Vous obtenez une clé rouge",
-img:"../assets/reset.jpg",   
-options : {option1: {optiontext:"Retourner au début", action: "goToChapter(`Reveil`)"},},},
+img:"../assets/reset.jpg",  
+options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
 mort3:{
 subtitle:"Retour à l'envoyeur",
 text:"L'homme ne bouge toujours pas et ne semble pas avoir été blesser par votre attaque. Vous sentez votre corps devenir faible et réaliser qu'il vous à renvoyer votre attaque. Vous succomber à votre blessure.",
 img:"../assets/mort.jpg",   
-options : {option1: {optiontext:"Retourner au début", action: "goToChapter(`Reveil`)"},},},
+options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
 sorti:{
 subtitle:"Shhhhh",
 text:"La créature se dirige vers la sortie du labo. Vous regarder les environ et voyer que la seule sortie possible pour ne pas vous faire attraper par la créature est par le sous-sol du laboratoire.",
 img:"../assets/exit.jpg",  
-options : {option1: {optiontext:"Prendre l'ascenseur", action: "goToChapter(`trappe`)"},},},
+options:[{text: "Prendre l'ascenseur",action:"goToChapter(`trappe`)"},]},
 
 
 trappe:{
 subtitle:"La trappe",
 text:"Vous arrivez devant une sorte de trappe vérouiller. Que voulez-vous faire?",
 img:"../assets/trap.jpg",
-options : {option1: {optiontext:"Tenter d'ouvrir la porte sans la clé", action: "goToChapter(`courir`)"},
-           option2: {optiontext:"Dévérouiller la porte avec la clé rouge", action: "goToChapter(`fin2`)"},},},
+options:[{text: "Tenter d'ouvrir la porte sans la clé",action:"goToChapter(`courir`)"},
+         {text: "Dévérouiller la porte avec la clé rouge",action:"goToChapter(`fin2`)"},]},
 
 
 fin2:{
 subtitle:"La sortie",
 text:"Après avoir descendu dans la trappe vous arriver devant la porte de sortie du monde souterrain. Vous trouver un papier avec un code gribouiller dessus. Vous obtenez le code secret.",
 img:"../assets/fin.jpg",    
-options : {option1: {optiontext:"Retourner au début", action: "goToChapter(`Reveil`)"},},},
+options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
 courir:{
 subtitle:"Cours",
 text:"En tentant d'ouvrir la trappe la créature vous entends et vous chasse. Que faire?",
 img:"../assets/courit.jpg", 
-options : {option1: {optiontext:"Courir", action: "goToChapter(`mort4`)"},
-           option2: {optiontext:"Tentez de combattre", action: "goToChapter(`murmure`)"},
-           option3: {optiontext:"Continuer d'essayer d'ouvrir la trappe", action: "goToChapter(`mort7`)"},},},
+options:[{text: "Courir",action:"goToChapter(`mort4`)"},
+         {text: "Tentez de combattre",action:"goToChapter(`murmure`)"},
+         {text: "Continuer d'essayer d'ouvrir la trappe",action:"goToChapter(`mort7`)"},]},
 
 
 mort4:{
 subtitle:"Griffes",
 text:"La créature vous attrape et vous tranche la tête...",
 img:"../assets/mort.jpg", 
-options : {option1: {optiontext:"Retourner au début", action: "goToChapter(`Reveil`)"},},},
+options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
 murmure:{
 subtitle:"Codeeeeeeeee",
 text:"La créature murmure des chiffres. Vous obtenez un code. Que voulez-vous faire?",
 img:"../assets/code.jpg",  
-options : {option1: {optiontext:"Fuir", action: "goToChapter(`mort5`)"},
-           option2: {optiontext:"Continuer à attaquer", action: "goToChapter(`enfin`)"},},},
+options:[{text: "Fuir",action:"goToChapter(`mort5`)"},
+         {text: "Continuer à attaquer",action:"goToChapter(`enfin`)"},]},
 
 
 mort5:{
 subtitle:"Téléportation?",
 text:"Vous ne voyez plus la créature. Elle apparait soudainement devant vous et vous brise la nuque...",
 img:"../assets/mort.jpg", 
-options : {option1: {optiontext:"Retourner au début", action: "goToChapter(`Reveil`)"},},},
+options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
 enfin:{
 subtitle:"La mort de la créature",
 text:"Vous finissez par réussir à tuer la créature.",
 img:"../assets/monstre.jpg", 
-options : {option1: {optiontext:"?", action: "goToChapter(`mort6`)"},},}, 
+options:[{text: "?",action:"goToChapter(`mort6`)"},]},
 
 
 mort6:{
 subtitle:"Illusion",
 text:"La créature n'étais pas réellement morte. Elle vous attrape et vous déchire en deux...",
 img:"../assets/mort.jpg",
-options : {option1: {optiontext:"Retourner au début", action: "goToChapter(`Reveil`)"},},},
-
+options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 mort7:{
 subtitle:"Une tête volante",
