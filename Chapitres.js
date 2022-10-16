@@ -4,7 +4,7 @@ Reveil: {
 subtitle:"Réveil",
 text:"Vous vous réveiller dans le monde souterrain pour la 666ième route.",
 img:"../assets/reveil.jpg",
-options:[{text: "suivant",action:"goToChapter(`Ou_Aller`)"}]},
+options:[{text: "suivant",action:"goToChapter(`Ou_Aller`)"},]},
 
 
 Ou_Aller: {
@@ -211,7 +211,8 @@ document.querySelector("p").innerHTML=chapterObj[chapterName]["text"];
 document.querySelector(".images").innerHTML=`<img src="${chapterObj[chapterName]["img"]}"class="image">`;   
 document.querySelector(".option1").innerHTML=chapterObj[chapterName]["options"][0]["text"];  
 document.querySelector(".option2").innerHTML=chapterObj[chapterName]["options"][1]["text"];  
-document.querySelector(".option3").innerHTML=chapterObj[chapterName]["options"][2]["text"];      
+document.querySelector(".option3").innerHTML=chapterObj[chapterName]["options"][2]["text"]; 
+for(i = 1; chapterObj < [chapterName].options.length, i++;) {<button class="option1" onclick="$[chapterObj[chapterName].options[i].action]">$[chapterObj[chapterName].options[i].option1]</button>};
 console.log(chapterObj[chapterName]["subtitle"]);
 };
 
