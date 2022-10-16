@@ -22,11 +22,16 @@ align-items: center;
     min-height: 100px;
     max-height: 900px;
     background-color: #3B444B;
+    padding: 30px;
+}
+
+.images{
+text-align: center;    
 }
 
 img {
-    width: 95%;
-    height: 50%;
+    width: 100%;
+   
 }
 
 h1{
@@ -53,13 +58,12 @@ width: 100%;
 color: #6D7B8D;
 font-size: 25px;
 display: flex;
-justify-content: space-around; 
+justify-content: space-between; 
 }
 
 
-.no1{
+.option1{
 width: 200px;
-height: 35px;
 display: flex;
 flex-direction: row;  
 border-radius: 5px;
@@ -69,11 +73,11 @@ justify-content: center;
 align-items: center;
 }
 
-.no1:hover{
+.option1:hover{
     color: crimson;
 }
 
-.no2{
+.option2{
 width: 200px;
 display: flex;
 flex-direction: row;      
@@ -84,11 +88,11 @@ justify-content: center;
 align-items: center;
 }
 
-.no2:hover{
+.option2:hover{
     color: crimson;
 }
 
-.no3{
+.option3{
 width: 200px;
 display: flex;
 flex-direction: row;    
@@ -99,6 +103,14 @@ justify-content: center;
 align-items: center;
 }
 
-.no3:hover{
+.option3:hover{
     color: crimson;
+}
+
+button{
+    width: 100%;
+    color: #6D7B8D;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between; 
 }
