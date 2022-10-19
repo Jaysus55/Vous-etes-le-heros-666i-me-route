@@ -203,16 +203,23 @@ options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"}]},
 }
 
 
-
+goToChapter("Reveil")
 
 function goToChapter(chapterName){
 document.querySelector("h2").innerHTML=chapterObj[chapterName]["subtitle"];    
 document.querySelector("p").innerHTML=chapterObj[chapterName]["text"];
 document.querySelector(".images").innerHTML=`<img src="${chapterObj[chapterName]["img"]}"class="image">`;   
-document.querySelector(".option1").innerHTML=chapterObj[chapterName]["options"][0]["text"];  
-document.querySelector(".option2").innerHTML=chapterObj[chapterName]["options"][1]["text"];  
-document.querySelector(".option3").innerHTML=chapterObj[chapterName]["options"][2]["text"]; 
+let barre = document.querySelector(".barre")
+barre.innerHTML = ""
+for(element of chapterObj[chapterName]['options']){
+let bouton = document.createElement("button")
+let text = document.createTextNode(element["text"])
+bouton.appendChild(text)
+bouton.setAttribute("onclick",element["action"])
+bouton.setAttribute("type","button")
+barre.appendChild(bouton)
 
+}
 };
 
 
