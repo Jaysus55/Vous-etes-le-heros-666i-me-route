@@ -75,15 +75,8 @@ Porte:{
 subtitle:"Porte vérouiller",
 text:"Vous arriver devant une immense porte vérouiller que vous n'aviez jamais vu auparavant. Que faire?",
 img:"../assets/porte.jpg", 
-options:[{text: "Entrer code secret",action:"goToChapter(`secret`)"},
-         {text: "Vous n'avez pas le code",action:"goToChapter(`codeNon`)"},
-         {text: "Entrer le code",action:"goToChapter(`codeOui`)"},]},
+options:[{text: "Avez-vous le code?",action:"condition1()"},]},
 
-
-secret:{
-subtitle:"Entrer le code secret",
-text:"mystere",
-options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
 codeNon:{
@@ -119,7 +112,7 @@ fin1:{
 subtitle:"Vous sauver le monde",
 text:"Vous trouver un remède à la maladie qui s'attaquait au monstre et sauver le monde des montres. Vous obtenez une clé rouge",
 img:"../assets/reset.jpg",  
-options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
+options:[{text: "Retourner au début",action:"clef(`Reveil`)"},]},
 
 
 mort3:{
@@ -140,8 +133,7 @@ trappe:{
 subtitle:"La trappe",
 text:"Vous arrivez devant une sorte de trappe vérouiller. Que voulez-vous faire?",
 img:"../assets/trap.jpg",
-options:[{text: "Tenter d'ouvrir la porte sans la clé",action:"goToChapter(`courir`)"},
-         {text: "Dévérouiller la porte avec la clé rouge",action:"goToChapter(`fin2`)"},]},
+options:[{text: "Avez-vous la clé?",action:"condition2()"},]},
 
 
 fin2:{
@@ -154,9 +146,9 @@ options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 courir:{
 subtitle:"Cours",
 text:"En tentant d'ouvrir la trappe la créature vous entends et vous chasse. Que faire?",
-img:"../assets/courit.jpg", 
+img:"../assets/courir.jpg", 
 options:[{text: "Courir",action:"goToChapter(`mort4`)"},
-         {text: "Tentez de combattre",action:"goToChapter(`murmure`)"},
+         {text: "Tentez de combattre",action:"cle(`murmure`)"},
          {text: "Continuer d'essayer d'ouvrir la trappe",action:"goToChapter(`mort7`)"},]},
 
 
@@ -218,9 +210,37 @@ bouton.appendChild(text)
 bouton.setAttribute("onclick",element["action"])
 bouton.setAttribute("type","button")
 barre.appendChild(bouton)
-
 }
 };
 
 
+let keyFounded = false;
+function cle(chapitre){
+keyFounded = true;    
+goToChapter(chapitre)
+}
 
+function condition1 (){
+if(keyFounded == true){
+goToChapter("codeOui")    
+}    
+if(keyFounded == false){
+goToChapter("codeNon")
+}
+}
+
+
+let keyFound = false;
+function clef(chapitre){
+keyFound = true;    
+goToChapter(chapitre)
+}
+
+function condition2 (){
+if(keyFound == true){
+goToChapter("fin2")    
+}    
+if(keyFound == false){
+goToChapter("courir")
+}    
+}
