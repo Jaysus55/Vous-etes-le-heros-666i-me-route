@@ -202,8 +202,6 @@ options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"}]},
 }
 
 
-goToChapter("Reveil")
-
 function goToChapter(chapterName){
 document.querySelector("h2").innerHTML=chapterObj[chapterName]["subtitle"];    
 document.querySelector("p").innerHTML=chapterObj[chapterName]["text"];
@@ -229,16 +227,26 @@ barre.appendChild(bouton)
 bouton.addEventListener("click",function(){
     const sono = new Audio("./assets/bruit_pas.mp3");
     sono.play();
+
     });
-}
+
+    localStorage.setItem("chapterObj", chapterName);   
+    chapterName = localStorage.getItem("chapterObj");
+    
+
 };
+}
+
 
 
 let keyFounded = false;
 function cle(chapitre){
 keyFounded = true;    
 goToChapter(chapitre)
+localStorage.setItem("keyFounded",keyFounded)
 }
+
+
 
 function condition1 (){
 if(keyFounded == true){
@@ -247,6 +255,7 @@ goToChapter("codeOui")
 if(keyFounded == false){
 goToChapter("codeNon")
 }
+localStorage.setItem("keyFounded",keyFounded)
 }
 
 
@@ -254,7 +263,10 @@ let keyFound = false;
 function clef(chapitre){
 keyFound = true;    
 goToChapter(chapitre)
+localStorage.setItem("KeyFound",keyFound)
 }
+
+
 
 function condition2 (){
 if(keyFound == true){
@@ -263,4 +275,11 @@ goToChapter("fin2")
 if(keyFound == false){
 goToChapter("courir")
 }    
+localStorage.setItem("KeyFound",keyFound)
 }
+
+if(localStorage.getItem("chapterObj")){
+    goToChapter(localStorage.getItem("chapterObj"))
+    }else{
+    goToChapter("Reveil")}
+
