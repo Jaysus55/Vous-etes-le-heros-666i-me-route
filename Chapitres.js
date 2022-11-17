@@ -52,6 +52,7 @@ mort1:{
 subtitle:"Sans vous tue",
 text:"Sans se met à rire et ces yeux s'illumine d'une couleur comme vous ne les aviez jamais vu apparavant et disparait. Quelques secondes plus tard vous sentez un liquide chaud soritr de votre bouche, avant même que vous puissiez le réaliser, vous vous effondrer.",
 img:"../assets/mort.jpg",  
+video:"./assets/mort.mp4",
 options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
@@ -68,6 +69,7 @@ mort2:{
 subtitle:"La créature vous attrape",
 text:"La créature vous a attraper et vous dévore vivant.",
 img:"../assets/mort.jpg",
+video:"./assets/mort.mp4",
 options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
@@ -118,7 +120,8 @@ options:[{text: "Retourner au début",action:"clef(`Reveil`)"},]},
 mort3:{
 subtitle:"Retour à l'envoyeur",
 text:"L'homme ne bouge toujours pas et ne semble pas avoir été blesser par votre attaque. Vous sentez votre corps devenir faible et réaliser qu'il vous à renvoyer votre attaque. Vous succomber à votre blessure.",
-img:"../assets/mort.jpg",   
+img:"../assets/mort.jpg", 
+video:"./assets/jumpscare.mp4",  
 options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
@@ -156,6 +159,7 @@ mort4:{
 subtitle:"Griffes",
 text:"La créature vous attrape et vous tranche la tête...",
 img:"../assets/mort.jpg", 
+video:"./assets/mort.mp4",
 options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
@@ -171,6 +175,7 @@ mort5:{
 subtitle:"Téléportation?",
 text:"Vous ne voyez plus la créature. Elle apparait soudainement devant vous et vous brise la nuque...",
 img:"../assets/mort.jpg", 
+video:"./assets/mort.mp4",
 options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 
@@ -185,12 +190,14 @@ mort6:{
 subtitle:"Illusion",
 text:"La créature n'étais pas réellement morte. Elle vous attrape et vous déchire en deux...",
 img:"../assets/mort.jpg",
+video:"./assets/mort.mp4",
 options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"},]},
 
 mort7:{
 subtitle:"Une tête volante",
 text:"La créature vous arrache la tête et la lance violement...",
-img:"../assets/mort.jpg",   
+img:"../assets/mort.jpg",  
+video:"./assets/mort.mp4", 
 options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"}]},
 }
 
@@ -201,6 +208,15 @@ function goToChapter(chapterName){
 document.querySelector("h2").innerHTML=chapterObj[chapterName]["subtitle"];    
 document.querySelector("p").innerHTML=chapterObj[chapterName]["text"];
 document.querySelector(".images").innerHTML=`<img src="${chapterObj[chapterName]["img"]}"class="image">`;   
+
+if(chapterObj[chapterName]["video"]){
+    document.querySelector(".images").innerHTML= `<video src="${chapterObj[chapterName]["video"]}" class="video_gif"  autoplay muted loop>`;
+}
+else{
+       document.querySelector(".images").innerHTML= `<img src="${chapterObj[chapterName]["img"]}" class="image">`;
+}
+
+
 let barre = document.querySelector(".barre")
 barre.innerHTML = ""
 for(element of chapterObj[chapterName]['options']){
@@ -210,6 +226,10 @@ bouton.appendChild(text)
 bouton.setAttribute("onclick",element["action"])
 bouton.setAttribute("type","button")
 barre.appendChild(bouton)
+bouton.addEventListener("click",function(){
+    const sono = new Audio("./assets/bruit_pas.mp3");
+    sono.play();
+    });
 }
 };
 

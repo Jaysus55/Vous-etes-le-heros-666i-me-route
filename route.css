@@ -81,3 +81,12 @@ align-items: center;
 color: #6D7B8D;
 font-size: 25px;
 }
+
+.video_gif{
+    min-width: 800px;
+    min-height: 400px;
+    max-width: 500px;
+    max-height: 400px;
+    width: 100%;
+   object-fit: cover;
+}
