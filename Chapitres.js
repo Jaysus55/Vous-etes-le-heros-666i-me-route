@@ -10,7 +10,7 @@ options:[{text: "suivant",action:"goToChapter(`Ou_Aller`)"},]},
 Ou_Aller: {
 subtitle:"Où Aller",
 text:"Il y a 3 pièces, où voulez-vous aller?",
-img:"../assets/chemins.jpg",  
+img:"assets/chemins.jpg",  
 options:[{text: "Tuer des monstres",action:"goToChapter(`Poussière`)"},
          {text: "Aller à la sortie de la caverne",action:"goToChapter(`Labo_alphys`)"},
          {text: "Éteindre la console",action:"goToChapter(`pause`)"},]},
