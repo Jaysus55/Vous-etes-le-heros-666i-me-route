@@ -225,7 +225,7 @@ bouton.setAttribute("onclick",element["action"])
 bouton.setAttribute("type","button")
 barre.appendChild(bouton)
 bouton.addEventListener("click",function(){
-    const sono = new Audio("./assets/bruit_pas.mp3");
+    const sono = new Audio("assets/bruit_pas.mp3");
     sono.play();
 
     });
