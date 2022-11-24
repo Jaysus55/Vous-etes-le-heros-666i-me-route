@@ -1,7 +1,7 @@
 let chapterObj = {
 
 Reveil: {
-subtitle:"Réveil",
+subtitle:"Réveil!",
 text:"Vous vous réveiller dans le monde souterrain pour la 666ième route.",
 img:"assets/reveil.jpg",
 options:[{text: "suivant",action:"goToChapter(`Ou_Aller`)"},]},
