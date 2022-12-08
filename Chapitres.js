@@ -201,8 +201,12 @@ video:"assets/mort.mp4",
 options:[{text: "Retourner au début",action:"goToChapter(`Reveil`)"}]},
 }
 
+let body = document.querySelector("body")
 
 function goToChapter(chapterName){
+console.log(body.classList)
+body.classList.remove(body.classList[0])
+body.classList.add(chapterName)
 document.querySelector("h2").innerHTML=chapterObj[chapterName]["subtitle"];    
 document.querySelector("p").innerHTML=chapterObj[chapterName]["text"];
 document.querySelector(".images").innerHTML=`<img src="${chapterObj[chapterName]["img"]}"class="image">`;   
@@ -224,10 +228,11 @@ bouton.appendChild(text)
 bouton.setAttribute("onclick",element["action"])
 bouton.setAttribute("type","button")
 barre.appendChild(bouton)
+let sonCheckbox = document.querySelector(".boiteSon")
 bouton.addEventListener("click",function(){
     const sono = new Audio("assets/bruit_pas.mp3");
-    sono.play();
-
+    if(sonCheckbox.checked == true){sono.play();}
+   
     });
 
     localStorage.setItem("chapterObj", chapterName);   
@@ -238,16 +243,16 @@ bouton.addEventListener("click",function(){
 }
 
 
-
+/*clé 1*/
 let keyFounded = false;
 function cle(chapitre){
 keyFounded = true;    
 goToChapter(chapitre)
-localStorage.setItem("keyFounded",keyFounded)
+localStorage.setItem("keyFounded",true)
 }
 
 
-
+/*condition de la clé 1*/
 function condition1 (){
 if(keyFounded == true){
 goToChapter("codeOui")    
@@ -255,19 +260,18 @@ goToChapter("codeOui")
 if(keyFounded == false){
 goToChapter("codeNon")
 }
-localStorage.setItem("keyFounded",keyFounded)
 }
 
-
+/*clé 2 */
 let keyFound = false;
 function clef(chapitre){
 keyFound = true;    
 goToChapter(chapitre)
-localStorage.setItem("KeyFound",keyFound)
+localStorage.setItem("KeyFound",true)
 }
 
 
-
+/*condition de la clé 2*/
 function condition2 (){
 if(keyFound == true){
 goToChapter("fin2")    
@@ -275,11 +279,36 @@ goToChapter("fin2")
 if(keyFound == false){
 goToChapter("courir")
 }    
-localStorage.setItem("KeyFound",keyFound)
 }
+
+/*sauvegarde de la clé 1*/
+if(localStorage.getItem("keyFounded") == "true"){
+keyFounded = true    
+}
+
+/*sauvegarde de la clé 2*/
+if(localStorage.getItem("keyFound") == "true"){
+    keyFound = true    
+    }
+
 
 if(localStorage.getItem("chapterObj")){
     goToChapter(localStorage.getItem("chapterObj"))
     }else{
     goToChapter("Reveil")}
+
+
+function reset(){
+localStorage.clear(); 
+goToChapter("Reveil");   
+}
+
+let btnReset = document.querySelector(".reset")
+
+btnReset.addEventListener("click",function(){
+reset()    
+})
+
+
+
 

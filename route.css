@@ -90,3 +90,199 @@ font-size: 25px;
     width: 100%;
    object-fit: cover;
 }
+
+.reset{
+    width: auto;
+}
+
+.boite{
+    align-self: flex-start;
+    font-size: 20px;
+    color: #6D7B8D;
+}
+
+.boite:hover{
+    
+    font-size: 20px;
+    color: crimson;
+}
+
+.boiteSon{
+    width: 50px;
+    height: 50px;
+    appearance: none;
+    background-color:#343434 ;
+    border-radius: 5px ;
+}
+
+.boiteSon:hover{
+    border: 2px solid crimson;}
+
+.boiteSon:checked{
+    width: 50px;
+    height: 50px;
+    appearance: none;
+    background-image: url("assets/sang.png");
+    background-size: contain;
+    border-radius: 5px ;
+}
+
+
+.menu{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+    }
+
+
+
+.mort1 .game{
+    background-color: crimson;
+    color: darkred;
+}
+.mort1{
+    background-color: darkred;
+}
+.mort1 h1 {
+    color: darkred;
+}
+.mort1 h2 {
+    color: darkred;
+}
+.mort1 p {
+    color: darkred;
+}
+
+
+
+.mort2 .game{
+    background-color: crimson;
+    color: darkred;
+}
+.mort2{
+    background-color: darkred;
+}
+.mort2 h1 {
+    color: darkred;
+}
+.mort2 h2 {
+    color: darkred;
+}
+.mort2 p {
+    color: darkred;
+}
+
+
+
+.mort3 .game{
+    background-color: crimson;
+    color: darkred;
+}
+.mort3{
+    background-color: darkred;
+}
+.mort3 h1 {
+    color: darkred;
+}
+.mort3 h2 {
+    color: darkred;
+}
+.mort3 p {
+    color: darkred;
+}
+
+
+
+.mort4 .game{
+    background-color: crimson;
+    color: darkred;
+}
+
+.mort4{
+    background-color: darkred;
+}
+.mort4 h1 {
+    color: darkred;
+}
+.mort4 h2 {
+    color: darkred;
+}
+.mort4 p {
+    color: darkred;
+}
+
+
+
+
+.mort5{
+    background-color: darkred;
+} 
+
+.mort5 .game{
+    background-color: crimson;
+    color: darkred;
+}
+.mort5 h1 {
+    color: darkred;
+}
+.mort5 h2 {
+    color: darkred;
+}
+.mort5 p {
+    color: darkred;
+}
+
+
+
+.mort6{
+    background-color: darkred;
+}
+
+.mort6 .game{
+    background-color: crimson;
+    color: darkred;
+}
+.mort6 h1 {
+    color: darkred;
+}
+.mort6 h2 {
+    color: darkred;
+}
+.mort6 p {
+    color: darkred;
+}
+
+
+
+.mort7{
+    background-color: darkred;
+}
+
+.mort7 .game{
+    background-color: crimson;
+    color: darkred;
+}.mort7 h1 {
+    color: darkred;
+}
+.mort7 h2 {
+    color: darkred;
+}
+.mort7 p {
+    color: darkred;
+}
+
+
+.fin1{
+animation-name: blink;
+animation-iteration-count: infinite;
+animation-duration: 2s;
+}
+@keyframes blink { 0%{ background-color:red; } 100%{ background-color:green; } }
+
+
+.fin2{
+  background-image: url("assets/arbres.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+    }
